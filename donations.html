@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mzamomtsha Primary School | Contact</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!--Fav icon-->
+    <link
+      rel="icon"
+      href="../../Assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./Assets/CSS/donation.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+<link rel="stylesheet" href="Assets/CSS/footer.css">
+    <!-- Modal window Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: var(--primary-color)">
+    <!--Dark mode-->
+
+   
+
+    <!--Dark mode-->
+    <nav
+      class="navbar navbar-expand-lg"
+      style="
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 16px 2px rgba(124, 114, 114, 0.25);
+      "
+      class="navbar navbar-expand-lg"
+    >
+      <div class="container-fluid">
+        <a class="schoolName" href="#">
+          <img class="logo" src="./assets/images/school_logo.png" alt="logo" />
+          &nbsp;Mzamomtsha Primary School
+        </a>
+
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto align-items-center">
+            <a href="./index.html" class="nav-item nav-link">Home</a>
+
+            <a href="./about.html" class="nav-item nav-link">About Us</a>
+
+            <a href="./events.html" class="nav-item nav-link">Events</a>
+
+            <a href="./contact.html" class="nav-item nav-link">Contact Us</a>
+
+            <div class="dropdown">
+              <a href="#" class="nav-item nav-link">
+                Explore More
+                <i class="fa-solid fa-circle-chevron-down"></i>
+              </a>
+
+              <div class="dropdown-options">
+                <a href="application/app1.html">Apply</a>
+
+                <a href="#"
+                  data-toggle="modal"
+                  data-target=".bd-example-modal-lg"
+                  style=" cursor: pointer"
+                >
+                  FAQS
+                </a>
+
+                <a href="donations.html" >Donations</a>
+              </div>
+            </div>
+            <img id="icon" src="./Images/moon.png" alt="sun" style="width: 30px;"/>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="payment-form">
+        <h1>Make Donation</h1>
+        <form id="form" class="form" autocomplete="off">
+          <div class="form-control">
+            <label for="cardNUm">Card Number</label>
+            <input type="number" placeholder="1234..." id="cardNUm" />
+            <img class="happy" src="./Assets/icons/happy.png">
+            <img class="sad" src="./Assets/icons/sad-face.png">
+            
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="cardHolder">Card Holder</label>
+            <input type="text" placeholder="Katlego Mashego..." id="cardHolder" />
+            <img class="happy" src="./Assets/icons/happy.png">
+            <img class="sad" src="./Assets/icons/sad-face.png">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="mmyy">Expiry</label>
+            <input type="number" placeholder="MM/YY" id="mmyy"/>
+            <img class="happy" src="./Assets/icons/happy.png">
+            <img class="sad" src="./Assets/icons/sad-face.png">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="cvv">Password check</label>
+            <input type="number" placeholder="CVV" id="cvv"/>
+            <img class="happy" src="./Assets/icons/happy.png">
+            <img class="sad" src="./Assets/icons/sad-face.png">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="amount">Password check</label>
+            <input type="number" placeholder="R200 000" id="amount"/>
+            <img class="happy" src="./Assets/icons/happy.png">
+            <img class="sad" src="./Assets/icons/sad-face.png">
+            <small>Error message</small>
+          </div>
+          <button>DONATE</button>
+        </form>
+      </div>
+    </main>
+    <!-- modal window code -->
+    <div
+      class="modal fade bd-example-modal-lg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+      style="color: #808000; border: none"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <h1><b>FAQs</b></h1>
+          <br />
+          <link rel="stylesheet" href="Assets/CSS/faq.css" />
+          <div class="container nav_container">     
+            <button id="menu-btn" style="display: none;"><i class="uil uil-bars"></i></button>
+            <button id="close-btn" style="display: none;" ><i class="uil uil-multiply"></i></i></button>
+        </div> 
+
+          <!--================================ Start Of FAQs Section ================================-->
+          <section id="faqs" style="margin-left: -15rem">
+            <div class="container faqs_container">
+              <article class="faqs" style="width: 40rem">
+                <span class="faq_icon"><i class="uil uil-plus"></i></span>
+                <div class="faq_question-answer">
+                  <h4 class="faq_question">
+                    I see online applications, what is it?
+                  </h4>
+                  <p class="faq_answer">
+                    The Online Applications Portal is a portal that helps making
+                    applying/enrolling your child to our school much more
+                    convinient. The portal removes the hardcopy school
+                    applications form and replaces it with your mobile handset
+                    to enroll your child at our school.
+                  </p>
+                </div>
+              </article>
+              <article class="faqs" style="width: 40rem">
+                <span class="faq_icon"><i class="uil uil-plus"></i></span>
+                <div class="faq_question-answer">
+                  <h4 class="faq_question">What is the age for enrollment?</h4>
+                  <p class="faq_answer">
+                    The Department of Education requires chidren enrolling at
+                    Primary Schools to be <br />
+                    Ages 5-18 years old.<br />
+                    Grade R - 5 years and Turning 6 Years in June<br />
+                    Grade 1: 7 Years | Grade 2: 8 Years <br />Grade 3: 9 Years |
+                    Grade 4: 10 Years <br />
+                    Grade 5: 11 Years | Grade 6: 12 Years <br />Grade 7: 13
+                    Years | Grade 8: 14 Years <br />
+                    Grade 9: 15 Years | Grade 10: 16 Years <br />
+                    Grade 11: 17 Years | Grade 12: 18 Years
+                  </p>
+                </div>
+              </article>
+              <article class="faqs" style="width: 40rem">
+                <span class="faq_icon"><i class="uil uil-plus"></i></span>
+                <div class="faq_question-answer">
+                  <h4 class="faq_question">What other languages are taught?</h4>
+                  <p class="faq_answer">
+                    The school offers two languages as part of the
+                    curriculum,IsiXhosa Home Language, English Home Language and
+                    Afrikaans First Additional Language.
+                  </p>
+                </div>
+              </article>
+              <article class="faqs" style="width: 40rem">
+                <span class="faq_icon"><i class="uil uil-plus"></i></span>
+                <div class="faq_question-answer">
+                  <h4 class="faq_question">
+                    What curriculum is followed at the school?
+                  </h4>
+                  <p class="faq_answer">
+                    As a School that is registered with the Western Cape
+                    Department of Education we are required to follow the CAPS
+                    curriculum.
+                  </p>
+                </div>
+              </article>
+              <article class="faqs" style="width: 40rem">
+                <span class="faq_icon"><i class="uil uil-plus"></i></span>
+                <div class="faq_question-answer">
+                  <h4 class="faq_question">
+                    How do I organise a tour of Mzamomtsha Primary Schools??
+                  </h4>
+                  <p class="faq_answer">
+                    If you are a prospective parent interested in viewing our
+                    model in action, we invite you to arrange directly with the
+                    school to you to take a tour during our school hours. You
+                    can view our schools’ contact details on our
+                    <a href="contact.html"></a> page.<br />
+                  </p>
+                </div>
+              </article>
+              <article class="faqs" style="width: 40rem">
+                <span class="faq_icon"><i class="uil uil-plus"></i></span>
+                <div class="faq_question-answer">
+                  <h4 class="faq_question">
+                    How can I make financial / material contribution to the
+                    school?
+                  </h4>
+                  <p class="faq_answer">
+                    Whether an individual, a group of individuals, an
+                    organisation or a group of companies, you can support
+                    Adopt-a-School Foundation and help us change lives, one
+                    school at a time.<br />Our Fundraising and Communications
+                    Team would be happy to assist in discussions for tailored
+                    projects. The Foundation is an implementer from start to
+                    make for meaningful Corporate Social Investments needs.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+          <!--================================ End Of FAQs Section ================================-->
+          <script src="js/main.js"></script>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Footer -->
+    <footer
+    class="text-center text-lg-start text-white"
+    style="background-color: #202020"
+    id="footer"
+  >
+    <section
+      class="d-flex justify-content-between p-2"
+      style="background-color: #808000"
+    >
+      <div class="me-5">
+        <!-- <span> Get connected with us on social networks: </span> -->
+      </div>
+
+      <div class="social-icons">
+        <a href="" class="text-white me-4" style="text-decoration: none;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="" class="text-white me-4" style="text-decoration: none;">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <a href="" class="text-white me-4" style="text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="" class="text-white me-4" style="text-decoration: none;">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="wholefooter">
+      <div class="container text-center text-md-start mt-5 p-1">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Mzamomtsha Primary School</h6>
+
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #808000; height: 2px"
+            />
+
+            <p>
+              <img
+                src="./Assets/Images/dept.jpg"
+                alt=""
+                style="height: 10rem; width: 18rem"
+              />
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Quick Links</h6>
+
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #808000; height: 2px"
+            />
+
+            <p>
+              <a href="index.html" class="text-white" style="text-decoration: none;">Home</a>
+            </p>
+
+            <p>
+              <a href="about.html" class="text-white" style="text-decoration: none;">About Us</a>
+            </p>
+
+            <p>
+              <a href="events.html" class="text-white" style="text-decoration: none;">Events</a>
+            </p>
+
+            <p>
+              <a
+                href="faq.html"
+                class="text-white"
+                data-toggle="modal"
+                data-target=".bd-example-modal-lg"
+                style="text-decoration: none;"
+                >FAQS</a
+              >
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Information</h6>
+
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #808000; height: 2px"
+            />
+
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Your Account</a>
+            </p>
+
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Privacy</a>
+            </p>
+
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Code Of Conduct</a>
+            </p>
+
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Help</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold">Contact Us</h6>
+
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #808000; height: 2px"
+            />
+
+            <p><i class="fas fa-home mr-3"></i> Umfuleni, Cape Town , RSA</p>
+            <p><i class="fas fa-envelope mr-3"></i> admin@mzamomtsha.co.za</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <!--chat system-->
+             <!-- CHAT BAR BLOCK -->
+  <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">
+      Chat with us!
+      <i
+        id="chat-icon"
+        style="color: #fff"
+        class="fa fa-fw fa-comments-o"
+      ></i>
+    </button>
+
+    <div class="content">
+      <div class="full-chat-block">
+        <!-- Message Container -->
+        <div class="outer-container">
+          <div class="chat-container">
+            <!-- Messages -->
+            <div id="chatbox">
+              <h5 id="chat-timestamp"></h5>
+              <p id="botStarterMessage" class="botText">
+                <span>Loading...</span>
+              </p>
+            </div>
+
+            <!-- User input box -->
+            <div class="chat-bar-input-block">
+              <div id="userInput">
+                <input
+                  id="textInput"
+                  class="input-box"
+                  type="text"
+                  name="msg"
+                  placeholder="Tap 'Enter' to send a message"
+                />
+                <p></p>
+              </div>
+
+              <div class="chat-bar-icons">
+                <i
+                  id="chat-icon"
+                  style="color: crimson"
+                  class="fa fa-fw fa-heart"
+                  onclick="heartButton()"
+                ></i>
+                <i
+                  id="chat-icon"
+                  style="color: #333"
+                  class="fa fa-fw fa-send"
+                  onclick="sendButton()"
+                ></i>
+              </div>
+            </div>
+
+            <div id="chat-bar-bottom">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!--chat system-->
+    </section>
+
+    <div class="text-center p-2" style="background-color: #808000">
+      © 2023 Copyright:
+
+      <a class="text-white" href="index.html" style="text-decoration: none;"> Mzamomtsha Primary School </a>
+    </div>
+  </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://use.fontawesome.com/f14fe45cb3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="sweetalert2.min.js"></script>
+    <script src="./Assets/JS/app.js"></script>
+    <script src="./Assets/chat/assets/js/Chat.js"></script>
+    <script src="./Assets/chat/app.js"></script>
+    <script>
+      AOS.init();
+      var icon = document.getElementById("icon");
+  
+      icon.onclick = function () {
+          document.body.classList.toggle("dark-mode");
+          if (document.body.classList.contains("dark-mode")) {
+              icon.src = "./Assets/icons/sun.png";
+          }else{
+              icon.src = "./Images/moon.png";
+          }
+      };
+
+      // This JavaScript code will run when the page is loaded
+      window.onload = function() {
+          // Scroll to the top of the page
+          window.scrollTo(0, 0);
+      };
+
+    
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+
+
+
+ </script>
+  
+
+
+    
+  
+  </body>
+</html>
