@@ -1,3 +1,108 @@
+
+.dark-mode{
+  --primary-color: #000106;
+  --secondary-color: #fff;
+  --active--color: #808000;
+  --hover-aclor : #808000;
+  --card-text-color: #fff;
+  --card-title-color: #808000;
+  --display-5-color: #fff;
+  --btn-color: #808000;
+  --current-color:  	#808080;
+}
+
+:root{
+--primary-color: #fff;
+--secondary-color: #808000;
+--active--color: #808000;
+--hover-aclor : #808000;
+--card-text-color: rgb(139, 123, 123);
+--card-title-color: black;
+--display-5-color: #050301;
+--btn-color: #808000;
+--current-color:  	#808080;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+
+.collapse a:hover
+{
+  color: var( --hover-aclor);
+}
+nav a:hover{
+  color: var(--active--color);
+}
+.logo{
+  width: 60px;
+}
+
+section {
+   display: flex;
+   gap: 3rem;
+}
+
+.card {
+  height: 1rem;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 22px;
+}
+
+.nav-link {
+  font-size: 22px;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 30px;
+  color: var(--secondary-color);
+}
+
+nav a:hover{
+  color: var(--active--color);
+}
+nav li:first-child{
+  margin-right: auto;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-options a {
+  font-size: 17px;
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+ 
+}
+
+.dropdown .dropdown-options a:hover {
+  color: var(--active--color);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 /* * {
@@ -23,10 +128,10 @@ html {
 } */
 
 /* LAYOUT */
-main {
+.main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 1000px;
+  height: 700px;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -34,11 +139,12 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+  margin: 30px auto;
 }
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,17 +155,16 @@ main {
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
-  margin-bottom: 1rem;
   color: white;
 }
 
 .score {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 300;
   color:white;
   margin-bottom: auto;
@@ -84,8 +189,8 @@ main {
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
-  width: 65%;
-  padding: 2rem;
+  width: 40%;
+  margin-bottom: 120px;
   text-align: center;
   transition: all 0.75s;
 }
@@ -93,7 +198,7 @@ main {
 .current-label {
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: #ddd;
 }
 
@@ -119,7 +224,7 @@ main {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-
+  margin-bottom: 190px;
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
@@ -132,13 +237,13 @@ main {
 }
 
 .btn--new {
-  top: 4rem;
+  top: 6rem;
 }
 .btn--roll {
-  top: 39.3rem;
+  top: 30.3rem;
 }
 .btn--hold {
-  top: 46.1rem;
+  top: 37.1rem;
 }
 
 .btn:active {
