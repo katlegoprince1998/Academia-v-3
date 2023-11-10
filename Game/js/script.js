@@ -1,5 +1,25 @@
 'use strict';
 
+let audio = new Audio("./tunes/dice.mp3");
+let audioClap = new Audio("./tunes/claps.mp3");
+let audioHold = new Audio("./tunes/hold.mp3");
+let audioNewGame = new Audio("./tunes/newGame.mp3");
+
+const playSound = (key) => {
+  audio.play()
+};
+
+const playHold = (key) => {
+  audioHold.play()
+};
+
+const playClap = (key) => {
+  audioClap.play()
+};
+
+const playNewGame = (key) => {
+  audioNewGame.play()
+};
 // Selecting elements
 const player0Element = document.querySelector('.player--0');
 const player1Element = document.querySelector('.player--1');
@@ -22,6 +42,7 @@ const init = function () {
   currentScore = 0;
   activePlayer = 0;
   playing = true;
+  playNewGame();
   
   score0Element.textContent = 0;
   score1Element.textContent = 0;
@@ -51,7 +72,9 @@ const switchPlayer = function () {
 
 // Rolling Dice Functionality
 btnRoll.addEventListener('click', function () {
+  playSound();
   if (playing) {
+    
     // Generating a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
   
@@ -73,6 +96,7 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnHold.addEventListener('click', function () {
+  playNewGame();
   if (playing) {
     // Add current score to active player score
     scores[activePlayer] += currentScore;
@@ -81,6 +105,7 @@ btnHold.addEventListener('click', function () {
   
     // Check if the player score is >= 100
     if(scores[activePlayer] >= 10) {
+      
       // Finish the game
       playing = false;
       diceElement.classList.add('hidden');
@@ -98,3 +123,9 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', init);
+
+
+
+//////////////////////////////////////////sounds
+
+
