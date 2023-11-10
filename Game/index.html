@@ -12,7 +12,7 @@
     <!--Fav icon-->
     <link
       rel="icon"
-      href="../../Assets/icons/favicon.ico"
+      href="../Assets/icons/favicon.ico"
       type="image/x-icon"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./Assets/CSS/donation.css" />
+    <link rel="stylesheet" href="../Assets/CSS/game.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -42,12 +42,13 @@
       integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="sweetalert2.min.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
-<link rel="stylesheet" href="Assets/CSS/footer.css">
+<link rel="stylesheet" href="../Assets/CSS/footer.css">
     <!-- Modal window Scripts -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -81,7 +82,7 @@
     >
       <div class="container-fluid">
         <a class="schoolName" href="#">
-          <img class="logo" src="./assets/images/school_logo.png" alt="logo" />
+          <img class="logo" src="../assets/images/school_logo.png" alt="logo" />
           &nbsp;Mzamomtsha Primary School
         </a>
 
@@ -96,13 +97,13 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto align-items-center">
-            <a href="./index.html" class="nav-item nav-link">Home</a>
+            <a href="../index.html" class="nav-item nav-link">Home</a>
 
-            <a href="./about.html" class="nav-item nav-link">About Us</a>
+            <a href="../about.html" class="nav-item nav-link">About Us</a>
 
-            <a href="./events.html" class="nav-item nav-link">Events</a>
+            <a href="../events.html" class="nav-item nav-link">Events</a>
 
-            <a href="./contact.html" class="nav-item nav-link">Contact Us</a>
+            <a href="../contact.html" class="nav-item nav-link">Contact Us</a>
 
             <div class="dropdown">
               <a href="#" class="nav-item nav-link">
@@ -121,60 +122,43 @@
                   FAQS
                 </a>
 
-                <a href="donations.html" >Donations</a>
-                <a  href="./Game/index.html">Play Game</a>
+                <a href="../donations.html" >Donations</a>
+                <a target="_blank" href="#">Play Game</a>
               </div>
             </div>
-            <img id="icon" src="./Images/moon.png" alt="sun" style="width: 30px;"/>
+            <img id="icon" src="../Images/moon.png" alt="sun" style="width: 30px;"/>
           </div>
         </div>
       </div>
     </nav>
-
     <main>
-      <div class="payment-form">
-        <h1>Make Donation</h1>
-        <form id="form" class="form" autocomplete="off">
-          <div class="form-control">
-            <label for="cardNUm">Card Number</label>
-            <input type="number" placeholder="1234..." id="cardNUm" />
-            <img class="happy" src="./Assets/icons/happy.png">
-            <img class="sad" src="./Assets/icons/sad-face.png">
-            
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="cardHolder">Card Holder</label>
-            <input type="text" placeholder="Katlego Mashego..." id="cardHolder" />
-            <img class="happy" src="./Assets/icons/happy.png">
-            <img class="sad" src="./Assets/icons/sad-face.png">
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="mmyy">Expiry</label>
-            <input type="number" placeholder="MM/YY" id="mmyy"/>
-            <img class="happy" src="./Assets/icons/happy.png">
-            <img class="sad" src="./Assets/icons/sad-face.png">
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="cvv">Password check</label>
-            <input type="number" placeholder="CVV" id="cvv"/>
-            <img class="happy" src="./Assets/icons/happy.png">
-            <img class="sad" src="./Assets/icons/sad-face.png">
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="amount">Password check</label>
-            <input type="number" placeholder="R200 000" id="amount"/>
-            <img class="happy" src="./Assets/icons/happy.png">
-            <img class="sad" src="./Assets/icons/sad-face.png">
-            <small>Error message</small>
-          </div>
-          <button>DONATE</button>
-        </form>
-      </div>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+      <img 
+        src="./assets/dice-5.png" 
+        alt="Playing dice" 
+        class="dice" 
+      />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
     </main>
+    <script src="./js/script.js"></script>
+
     <!-- modal window code -->
     <div
       class="modal fade bd-example-modal-lg"
@@ -342,7 +326,7 @@
 
             <p>
               <img
-                src="./Assets/Images/dept.jpg"
+                src="../Assets/Images/dept.jpg"
                 alt=""
                 style="height: 10rem; width: 18rem"
               />
@@ -358,20 +342,20 @@
             />
 
             <p>
-              <a href="index.html" class="text-white" style="text-decoration: none;">Home</a>
+              <a href="../index.html" class="text-white" style="text-decoration: none;">Home</a>
             </p>
 
             <p>
-              <a href="about.html" class="text-white" style="text-decoration: none;">About Us</a>
+              <a href="../about.html" class="text-white" style="text-decoration: none;">About Us</a>
             </p>
 
             <p>
-              <a  href="events.html" class="text-white" style="text-decoration: none;">Events</a>
+              <a  href="../events.html" class="text-white" style="text-decoration: none;">Events</a>
             </p>
 
             <p>
               <a
-                href="faq.html"
+                href="../faq.html"
                 class="text-white"
                 data-toggle="modal"
                 data-target=".bd-example-modal-lg"
@@ -380,7 +364,7 @@
               >
             </p>
             <p>
-              <a href="./Game/index.html"  class="text-white" style="text-decoration: none;">Play Game</a>
+              <a href="#"  class="text-white" style="text-decoration: none;">Play Game</a>
             </p>
           </div>
 
@@ -489,7 +473,7 @@
     <div class="text-center p-2" style="background-color: #808000">
       © 2023 Copyright:
 
-      <a class="text-white" href="index.html" style="text-decoration: none;"> Mzamomtsha Primary School </a>
+      <a class="text-white" href="../index.html" style="text-decoration: none;"> Mzamomtsha Primary School </a>
     </div>
   </footer>
 
@@ -506,9 +490,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="sweetalert2.min.js"></script>
-    <script src="./Assets/JS/app.js"></script>
-    <script src="./Assets/chat/assets/js/Chat.js"></script>
-    <script src="./Assets/chat/app.js"></script>
+    <script src="../Assets/JS/app.js"></script>
+    <script src="../Assets/chat/assets/js/Chat.js"></script>
+    <script src="../Assets/chat/app.js"></script>
+    <script src="../js/script.js"></script>
     <script>
       AOS.init();
       var icon = document.getElementById("icon");
@@ -516,9 +501,9 @@
       icon.onclick = function () {
           document.body.classList.toggle("dark-mode");
           if (document.body.classList.contains("dark-mode")) {
-              icon.src = "./Assets/icons/sun.png";
+              icon.src = "../Assets/icons/sun.png";
           }else{
-              icon.src = "./Images/moon.png";
+              icon.src = "../Images/moon.png";
           }
       };
 
